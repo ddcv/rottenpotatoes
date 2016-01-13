@@ -1,0 +1,12 @@
+# spec/models/movie_spec.rb:
+ 
+require 'spec_helper.rb'
+ 
+describe Movie do
+  describe 'searching Tmdb by keyword' do
+    it 'should call Tmdb with title keywords' do
+      Tmdb::Movie.should_receive(:find).with('Inception')
+      Movie.find_in_tmdb('Inception')
+    end
+  end
+end
