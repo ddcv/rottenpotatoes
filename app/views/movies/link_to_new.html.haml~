@@ -1,5 +1,0 @@
-
-
-    = link_to 'Add Review', new_movie_review_path(@movie)
-
-

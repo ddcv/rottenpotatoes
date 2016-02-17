@@ -51,12 +51,6 @@ table#movies th, table#movies td {
 table#movies th.hilite {
   background-color: yellow;
 }
-#movieInfo {
-  padding: 2ex;
-  position: absolute;
-  border: 2px double grey;
-  background: wheat;
-}
 #notice #warning {
   background: rosybrown;
   margin: 1em 0;
