@@ -16,7 +16,10 @@ group :development, :test do
   gem 'launchy'
   gem 'rspec'
   gem 'rspec-rails', '~> 3.0'
-  gem 'autotest-rails'
+  gem 'ZenTest'
+  gem 'omniauth'
+  gem 'omniauth-twitter'
+#  gem 'autotest-rails'
 end
 
 group :test do

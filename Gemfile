@@ -17,6 +17,9 @@ group :development, :test do
   gem 'rspec'
   gem 'rspec-rails', '~> 3.0'
   gem 'ZenTest'
+  gem 'omniauth'
+  gem 'omniauth-twitter'
+  gem 'railroady'
 #  gem 'autotest-rails'
 end
 

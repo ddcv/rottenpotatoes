@@ -14,7 +14,7 @@
       - elsif flash[:warning]
         #warning.message= flash[:warning]
 
-      = render :partial=>'sessions/login'
+      =render :partial=>'sessions/login'
 
       = yield
 

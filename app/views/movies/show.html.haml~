@@ -14,7 +14,8 @@
 
 %p#description= @movie.description
 
-
+- @movie.each do |movie|
+  %p = pretty_print(movie)
 
 
 = link_to 'Add Review', new_movie_review_path(@movie)
