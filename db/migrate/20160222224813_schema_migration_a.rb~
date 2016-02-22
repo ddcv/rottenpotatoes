@@ -1,0 +1,4 @@
+class SchemaMigrationA < ActiveRecord::Migration
+  def change
+  end
+end
