@@ -19,6 +19,7 @@ group :development, :test do
   gem 'ZenTest'
   gem 'omniauth'
   gem 'omniauth-twitter'
+  gem 'railroady'
 #  gem 'autotest-rails'
 end
 

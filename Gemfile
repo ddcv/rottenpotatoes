@@ -16,6 +16,7 @@ group :development, :test do
   gem 'launchy'
   gem 'rspec'
   gem 'rspec-rails', '~> 3.0'
+  gem 'jasmine'
   gem 'ZenTest'
   gem 'omniauth'
   gem 'omniauth-twitter'
