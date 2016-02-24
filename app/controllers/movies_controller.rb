@@ -68,6 +68,8 @@ class MoviesController < ApplicationController
       redirect_to :sort => sort, :ratings => @selected_ratings and return
     end
     @movies = Movie.where(rating: @selected_ratings.keys).order(ordering)
+    @top_5 = Movie.joins(:reviews).group('movie_id').
+      order("AVG(potatoes) DESC").limit(5)
   end
 
 # add to movies_controller.rb, anywhere inside

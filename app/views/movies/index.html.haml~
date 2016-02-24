@@ -19,8 +19,7 @@
       %th More Info
   %tbody
     = render :partial=>'movie', :collection=>@movies
-
-= render :partial=>'topmovies', :collection=>@top_5
+    = render :partial=>'topmovies', :collection=>@top_5
 
 = link_to 'Add new movie', new_movie_path
 

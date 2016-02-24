@@ -43,7 +43,7 @@ class MoviesController < ApplicationController
   def show
     id = params[:id] # retrieve movie ID from URI route
     @movie = Movie.find(id) # look up movie by unique ID
-    render(:partial => 'ajax_movie', :object => @movie) if request.xhr?
+    render(:partial => 'ajax_movie', locals: {movie: @movie}) if request.xhr?
     # will render app/views/movies/show.<extension> by default
   end
 
@@ -68,6 +68,8 @@ class MoviesController < ApplicationController
       redirect_to :sort => sort, :ratings => @selected_ratings and return
     end
     @movies = Movie.where(rating: @selected_ratings.keys).order(ordering)
+    @top_5 = Movie.joins(:reviews).group('movie_id').
+      order("AVG(potatoes) DESC").limit(5)
   end
 
 # add to movies_controller.rb, anywhere inside

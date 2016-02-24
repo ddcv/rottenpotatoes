@@ -1,0 +1,7 @@
+
+
+-# a cacheable partial for top movies
+- cache('topmovies') do
+  %ul#topmovies
+    - @top_5.each do |movie|
+      %li= movie.title

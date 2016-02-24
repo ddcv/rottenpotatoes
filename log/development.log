@@ -7440,3 +7440,585 @@ Processing by MoviesController#show as */*
   [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
   Rendered movies/_ajax_movie.html.haml (0.3ms)
 Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?ratings[G]=1&ratings[NC-17]=1&ratings[PG]=1&ratings[PG-13]=1&ratings[R]=1&sort=title" for 127.0.0.1 at 2016-02-22 20:32:15 -0400
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"title"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT  "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."title" ASC
+  Rendered movies/_movie.html.haml (5.1ms)
+  Rendered movies/index.html.haml within layouts/application (24.7ms)
+  Rendered sessions/_login.html.haml (1.4ms)
+Completed 200 OK in 221ms (Views: 181.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2016-02-22 20:32:16 -0400
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2016-02-22 20:32:16 -0400
+
+
+Started GET "/assets/movie_list_filter.self.js?body=1" for 127.0.0.1 at 2016-02-22 20:32:16 -0400
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2016-02-22 20:32:16 -0400
+
+
+Started GET "/assets/movie_popup.self.js?body=1" for 127.0.0.1 at 2016-02-22 20:32:16 -0400
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2016-02-22 20:32:16 -0400
+
+
+Started GET "/movies?ratings[G]=1&ratings[NC-17]=1&ratings[PG]=1&ratings[PG-13]=1&ratings[R]=1&sort=title" for 127.0.0.1 at 2016-02-24 01:45:15 -0400
+
+ActionController::RoutingError (undefined method `caches_page' for MoviesController:Class):
+  app/controllers/movies_controller.rb:43:in `<class:MoviesController>'
+  app/controllers/movies_controller.rb:2:in `<top (required)>'
+
+
+  Rendered /home/saasbook/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (16.9ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (59.3ms)
+
+
+Started GET "/movies?ratings[G]=1&ratings[NC-17]=1&ratings[PG]=1&ratings[PG-13]=1&ratings[R]=1&sort=title" for 127.0.0.1 at 2016-02-24 01:47:24 -0400
+
+ActionController::RoutingError (undefined method `caches_action' for MoviesController:Class):
+  app/controllers/movies_controller.rb:43:in `<class:MoviesController>'
+  app/controllers/movies_controller.rb:2:in `<top (required)>'
+
+
+  Rendered /home/saasbook/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (16.2ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (57.2ms)
+
+
+Started GET "/movies?ratings[G]=1&ratings[NC-17]=1&ratings[PG]=1&ratings[PG-13]=1&ratings[R]=1&sort=title" for 127.0.0.1 at 2016-02-24 02:24:30 -0400
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"title"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT  "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."title" ASC
+  Rendered movies/_movie.html.haml (5.6ms)
+  Rendered movies/index.html.haml within layouts/application (19.3ms)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 1.8ms)
+
+SyntaxError (/home/saasbook/Documents/newrottenpotatoes/rottenpotatoes/app/views/movies/_movie.html.haml:10: syntax error, unexpected keyword_ensure, expecting keyword_end
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/home/saasbook/Documents/newrottenpotatoes/rottenpotatoes/app/views/movies/_movie.html.haml:13: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/movies/_movie.html.haml:10: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/movies/_movie.html.haml:13: syntax error, unexpected end-of-input, expecting keyword_end
+  app/views/movies/index.html.haml:21:in `_app_views_movies_index_html_haml___955729883_84456820'
+
+
+  Rendered /home/saasbook/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.7ms)
+
+
+Started GET "/movies?ratings[G]=1&ratings[NC-17]=1&ratings[PG]=1&ratings[PG-13]=1&ratings[R]=1&sort=title" for 127.0.0.1 at 2016-02-24 02:25:37 -0400
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"title"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT  "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."title" ASC
+  Rendered movies/_movie.html.haml (9.4ms)
+  Rendered movies/index.html.haml within layouts/application (30.3ms)
+  Rendered sessions/_login.html.haml (1.1ms)
+Completed 200 OK in 244ms (Views: 196.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2016-02-24 02:25:38 -0400
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:25:38 -0400
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:25:38 -0400
+
+
+Started GET "/assets/movie_list_filter.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:25:38 -0400
+
+
+Started GET "/assets/movie_popup.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:25:38 -0400
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:25:38 -0400
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2016-02-24 02:25:47 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT  "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_ajax_movie.html.haml (1.2ms)
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2016-02-24 02:25:50 -0400
+Processing by MoviesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT  "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_ajax_movie.html.haml (0.3ms)
+Completed 200 OK in 11ms (Views: 7.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/1/edit" for 127.0.0.1 at 2016-02-24 02:25:51 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT  "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_movie_form.html.haml (17.8ms)
+  Rendered movies/edit.html.haml within layouts/application (24.4ms)
+  Rendered sessions/_login.html.haml (0.3ms)
+Completed 200 OK in 40ms (Views: 38.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2016-02-24 02:25:51 -0400
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:25:51 -0400
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:25:51 -0400
+
+
+Started GET "/assets/movie_list_filter.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:25:51 -0400
+
+
+Started GET "/assets/movie_popup.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:25:51 -0400
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:25:51 -0400
+
+
+Started PUT "/movies/1" for 127.0.0.1 at 2016-02-24 02:25:54 -0400
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rA91wk4dvecq/Vfq5uyu+1AyD+5ydDMO4tDV5EfoRfSUAp5b1/eCVpD1nxniuMhdAFdmgLuqynurfE+zlVpETA==", "movie"=>{"title"=>"Aladdin", "rating"=>"G", "release_date(1i)"=>"1992", "release_date(2i)"=>"11", "release_date(3i)"=>"25", "description"=>"Disney in the '90s"}, "commit"=>"Update Movie Info", "id"=>"1"}
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT  "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies/1
+Completed 302 Found in 9ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2016-02-24 02:25:54 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT  "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.haml within layouts/application (8.3ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 50ms (Views: 48.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2016-02-24 02:25:54 -0400
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:25:54 -0400
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:25:54 -0400
+
+
+Started GET "/assets/movie_list_filter.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:25:54 -0400
+
+
+Started GET "/assets/movie_popup.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:25:54 -0400
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:25:54 -0400
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-02-24 02:25:57 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMoviegoer Load (5.0ms)[0m  [1mSELECT  "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=title
+Completed 302 Found in 7ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=title" for 127.0.0.1 at 2016-02-24 02:25:57 -0400
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"title"}
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT  "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."title" ASC[0m
+  Rendered movies/_movie.html.haml (9.7ms)
+  Rendered movies/index.html.haml within layouts/application (25.0ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 54ms (Views: 47.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2016-02-24 02:25:57 -0400
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:25:57 -0400
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:25:57 -0400
+
+
+Started GET "/assets/movie_list_filter.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:25:57 -0400
+
+
+Started GET "/assets/movie_popup.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:25:57 -0400
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:25:57 -0400
+
+
+Started GET "/movies?utf8=%E2%9C%93&title_sort=true&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BNC-17%5D=1&ratings%5BR%5D=1&commit=Refresh" for 127.0.0.1 at 2016-02-24 02:26:18 -0400
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "title_sort"=>"true", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "NC-17"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT  "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=title
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=title" for 127.0.0.1 at 2016-02-24 02:26:18 -0400
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"title"}
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT  "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."title" ASC
+  Rendered movies/_movie.html.haml (6.2ms)
+  Rendered movies/index.html.haml within layouts/application (10.0ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2016-02-24 02:26:18 -0400
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:26:18 -0400
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:26:18 -0400
+
+
+Started GET "/assets/movie_list_filter.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:26:18 -0400
+
+
+Started GET "/assets/movie_popup.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:26:18 -0400
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:26:18 -0400
+
+
+Started GET "/movies?utf8=%E2%9C%93&title_sort=true&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BNC-17%5D=1&ratings%5BR%5D=1&commit=Refresh" for 127.0.0.1 at 2016-02-24 02:26:34 -0400
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "title_sort"=>"true", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "NC-17"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT  "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=title
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=title" for 127.0.0.1 at 2016-02-24 02:26:34 -0400
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"title"}
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT  "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."title" ASC[0m
+  Rendered movies/_movie.html.haml (2.8ms)
+  Rendered movies/index.html.haml within layouts/application (10.2ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2016-02-24 02:26:35 -0400
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:26:35 -0400
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:26:35 -0400
+
+
+Started GET "/assets/movie_list_filter.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:26:35 -0400
+
+
+Started GET "/assets/movie_popup.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:26:35 -0400
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:26:35 -0400
+
+
+Started GET "/movies?ratings[G]=1&ratings[NC-17]=1&ratings[PG]=1&ratings[PG-13]=1&ratings[R]=1&sort=title" for 127.0.0.1 at 2016-02-24 02:45:52 -0400
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"title"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT  "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."title" ASC
+  Rendered movies/_movie.html.haml (4.9ms)
+  Rendered movies/_topmovies.html.haml (0.0ms)
+  Rendered movies/index.html.haml within layouts/application (26.4ms)
+  Rendered sessions/_login.html.haml (2.7ms)
+Completed 200 OK in 222ms (Views: 180.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2016-02-24 02:45:53 -0400
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:45:53 -0400
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:45:53 -0400
+
+
+Started GET "/assets/movie_list_filter.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:45:53 -0400
+
+
+Started GET "/assets/movie_popup.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:45:53 -0400
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:45:53 -0400
+
+
+Started GET "/movies?ratings[G]=1&ratings[NC-17]=1&ratings[PG]=1&ratings[PG-13]=1&ratings[R]=1&sort=title" for 127.0.0.1 at 2016-02-24 02:47:18 -0400
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"title"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT  "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mMovie Load (5.5ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."title" ASC
+  Rendered movies/_movie.html.haml (5.5ms)
+  Rendered movies/_topmovies.html.haml (0.0ms)
+  Rendered movies/index.html.haml within layouts/application (29.2ms)
+  Rendered sessions/_login.html.haml (1.0ms)
+Completed 200 OK in 231ms (Views: 183.2ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2016-02-24 02:47:19 -0400
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:47:19 -0400
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:47:19 -0400
+
+
+Started GET "/assets/movie_list_filter.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:47:19 -0400
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:47:19 -0400
+
+
+Started GET "/assets/movie_popup.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:47:19 -0400
+
+
+Started GET "/movies?ratings[G]=1&ratings[NC-17]=1&ratings[PG]=1&ratings[PG-13]=1&ratings[R]=1&sort=title" for 127.0.0.1 at 2016-02-24 02:50:08 -0400
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"title"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT  "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mMovie Load (0.9ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."title" ASC
+  Rendered movies/_movie.html.haml (4.7ms)
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT  "movies".* FROM "movies" INNER JOIN "reviews" ON "reviews"."movie_id" = "movies"."id" GROUP BY movie_id  ORDER BY AVG(potatoes) DESC LIMIT 5[0m
+  Rendered movies/_topmovies.html.haml (3.2ms)
+  Rendered movies/index.html.haml within layouts/application (55.1ms)
+Completed 500 Internal Server Error in 102ms (ActiveRecord: 3.0ms)
+
+ActionView::Template::Error (undefined method `name' for #<Movie:0xb5c2d1ec>):
+    4: - cache('topmovies') do
+    5:   %ul#topmovies
+    6:     - @top_5.each do |movie|
+    7:       %li= movie.name
+  app/views/movies/_topmovies.html.haml:7:in `block (2 levels) in _app_views_movies__topmovies_html_haml__269108186__622763108'
+  app/views/movies/_topmovies.html.haml:6:in `block in _app_views_movies__topmovies_html_haml__269108186__622763108'
+  app/views/movies/_topmovies.html.haml:4:in `_app_views_movies__topmovies_html_haml__269108186__622763108'
+  app/views/movies/index.html.haml:22:in `_app_views_movies_index_html_haml___941455175_98531230'
+
+
+  Rendered /home/saasbook/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.5ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.2ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.9ms)
+
+
+Started GET "/movies?ratings[G]=1&ratings[NC-17]=1&ratings[PG]=1&ratings[PG-13]=1&ratings[R]=1&sort=title" for 127.0.0.1 at 2016-02-24 02:50:30 -0400
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"title"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT  "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."title" ASC
+  Rendered movies/_movie.html.haml (5.3ms)
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" INNER JOIN "reviews" ON "reviews"."movie_id" = "movies"."id" GROUP BY movie_id  ORDER BY AVG(potatoes) DESC LIMIT 5[0m
+  Rendered movies/_topmovies.html.haml (1.1ms)
+  Rendered movies/index.html.haml within layouts/application (38.5ms)
+  Rendered sessions/_login.html.haml (1.5ms)
+Completed 200 OK in 233ms (Views: 191.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2016-02-24 02:50:31 -0400
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:50:31 -0400
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:50:31 -0400
+
+
+Started GET "/assets/movie_list_filter.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:50:31 -0400
+
+
+Started GET "/assets/movie_popup.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:50:31 -0400
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:50:31 -0400
+
+
+Started GET "/movies?ratings[G]=1&ratings[NC-17]=1&ratings[PG]=1&ratings[PG-13]=1&ratings[R]=1&sort=title" for 127.0.0.1 at 2016-02-24 02:51:10 -0400
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"title"}
+  [1m[35mMoviegoer Load (0.1ms)[0m  SELECT  "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."title" ASC[0m
+  Rendered movies/_movie.html.haml (7.5ms)
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" INNER JOIN "reviews" ON "reviews"."movie_id" = "movies"."id" GROUP BY movie_id  ORDER BY AVG(potatoes) DESC LIMIT 5
+  Rendered movies/_topmovies.html.haml (0.1ms)
+  Rendered movies/index.html.haml within layouts/application (20.1ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 47ms (Views: 45.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2016-02-24 02:51:10 -0400
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:51:10 -0400
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:51:10 -0400
+
+
+Started GET "/assets/movie_list_filter.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:51:10 -0400
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:51:10 -0400
+
+
+Started GET "/assets/movie_popup.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:51:10 -0400
+
+
+Started GET "/movies?utf8=%E2%9C%93&title_sort=true&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BNC-17%5D=1&ratings%5BR%5D=1&commit=Refresh" for 127.0.0.1 at 2016-02-24 02:51:13 -0400
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "title_sort"=>"true", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "NC-17"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMoviegoer Load (0.1ms)[0m  [1mSELECT  "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=title
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=title" for 127.0.0.1 at 2016-02-24 02:51:13 -0400
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"title"}
+  [1m[35mMoviegoer Load (2.1ms)[0m  SELECT  "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."title" ASC[0m
+  Rendered movies/_movie.html.haml (3.3ms)
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" INNER JOIN "reviews" ON "reviews"."movie_id" = "movies"."id" GROUP BY movie_id  ORDER BY AVG(potatoes) DESC LIMIT 5
+  Rendered movies/_topmovies.html.haml (0.2ms)
+  Rendered movies/index.html.haml within layouts/application (8.6ms)
+  Rendered sessions/_login.html.haml (0.2ms)
+Completed 200 OK in 37ms (Views: 32.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2016-02-24 02:51:14 -0400
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:51:14 -0400
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:51:14 -0400
+
+
+Started GET "/assets/movie_list_filter.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:51:14 -0400
+
+
+Started GET "/assets/movie_popup.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:51:14 -0400
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:51:14 -0400
+
+
+Started GET "/movies?ratings[G]=1&ratings[NC-17]=1&ratings[PG]=1&ratings[PG-13]=1&ratings[R]=1&sort=title" for 127.0.0.1 at 2016-02-24 02:52:53 -0400
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"title"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT  "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."title" ASC
+  Rendered movies/_movie.html.haml (5.1ms)
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" INNER JOIN "reviews" ON "reviews"."movie_id" = "movies"."id" GROUP BY movie_id  ORDER BY AVG(potatoes) DESC LIMIT 5[0m
+  Rendered movies/_topmovies.html.haml (17.7ms)
+  Rendered movies/index.html.haml within layouts/application (61.6ms)
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 2.3ms)
+
+ActionView::Template::Error (undefined local variable or method `moviegoer' for #<#<Class:0xa6ac318>:0xb5ddbd68>):
+    4: - cache('top_moviegoers') do
+    5:   %ul#topmovies
+    6:     - @top_5.each do |movie|
+    7:       %li= moviegoer.name
+  app/views/movies/_topmovies.html.haml:7:in `block (2 levels) in _app_views_movies__topmovies_html_haml___443532759__623295748'
+  app/views/movies/_topmovies.html.haml:6:in `block in _app_views_movies__topmovies_html_haml___443532759__623295748'
+  app/views/movies/_topmovies.html.haml:4:in `_app_views_movies__topmovies_html_haml___443532759__623295748'
+  app/views/movies/index.html.haml:22:in `_app_views_movies_index_html_haml__779763602_87322270'
+
+
+  Rendered /home/saasbook/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.8ms)
+
+
+Started GET "/movies?ratings[G]=1&ratings[NC-17]=1&ratings[PG]=1&ratings[PG-13]=1&ratings[R]=1&sort=title" for 127.0.0.1 at 2016-02-24 02:53:38 -0400
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"title"}
+  [1m[36mMoviegoer Load (0.2ms)[0m  [1mSELECT  "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."title" ASC
+  Rendered movies/_movie.html.haml (5.2ms)
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" INNER JOIN "reviews" ON "reviews"."movie_id" = "movies"."id" GROUP BY movie_id  ORDER BY AVG(potatoes) DESC LIMIT 5[0m
+  Rendered movies/_topmovies.html.haml (3.0ms)
+  Rendered movies/index.html.haml within layouts/application (40.1ms)
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 2.5ms)
+
+ActionView::Template::Error (undefined method `name' for #<Movie:0xb5c25168>):
+    4: - cache('topmovies') do
+    5:   %ul#topmovies
+    6:     - @top_5.each do |movie|
+    7:       %li= movie.name
+  app/views/movies/_topmovies.html.haml:7:in `block (2 levels) in _app_views_movies__topmovies_html_haml__108550263__622779558'
+  app/views/movies/_topmovies.html.haml:6:in `block in _app_views_movies__topmovies_html_haml__108550263__622779558'
+  app/views/movies/_topmovies.html.haml:4:in `_app_views_movies__topmovies_html_haml__108550263__622779558'
+  app/views/movies/index.html.haml:23:in `_app_views_movies_index_html_haml__813736422_97267940'
+
+
+  Rendered /home/saasbook/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.3ms)
+
+
+Started GET "/movies?ratings[G]=1&ratings[NC-17]=1&ratings[PG]=1&ratings[PG-13]=1&ratings[R]=1&sort=title" for 127.0.0.1 at 2016-02-24 02:53:58 -0400
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"title"}
+  [1m[36mMoviegoer Load (1.1ms)[0m  [1mSELECT  "moviegoers".* FROM "moviegoers" WHERE "moviegoers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."title" ASC
+  Rendered movies/_movie.html.haml (4.9ms)
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT  "movies".* FROM "movies" INNER JOIN "reviews" ON "reviews"."movie_id" = "movies"."id" GROUP BY movie_id  ORDER BY AVG(potatoes) DESC LIMIT 5[0m
+  Rendered movies/_topmovies.html.haml (1.0ms)
+  Rendered movies/index.html.haml within layouts/application (43.4ms)
+  Rendered sessions/_login.html.haml (1.5ms)
+Completed 200 OK in 288ms (Views: 240.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2016-02-24 02:53:59 -0400
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:53:59 -0400
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:53:59 -0400
+
+
+Started GET "/assets/movie_list_filter.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:53:59 -0400
+
+
+Started GET "/assets/movie_popup.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:53:59 -0400
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2016-02-24 02:53:59 -0400
